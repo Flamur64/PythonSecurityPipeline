@@ -40,6 +40,8 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip3 install --upgrade pip && \
     pip3 install virtualenv safety liccheck trufflehog bandit selenium ansible boto boto3 --no-cache-dir
 
+RUN ansible-galaxy collection install amazon.aws
+
 # Configure Ansible to use right keys and not check host auth for this ephemeral/temp AWS host
 COPY ansible.cfg /etc/ansible/ansible.cfg
 
