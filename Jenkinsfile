@@ -21,7 +21,7 @@ pipeline {
       stage('Checkout project'){
         steps {
           echo 'downloading git directory..'
-	  git 'https://github.com/arberatD/PythonSecurityPipeline.git'
+	  git 'https://github.com/Flamur64/PythonSecurityPipeline.git'
         }
       }      
       stage('git secret check'){
