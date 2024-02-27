@@ -45,6 +45,7 @@ RUN ansible-galaxy collection install amazon.aws
 # Configure Ansible to use right keys and not check host auth for this ephemeral/temp AWS host
 COPY ansible.cfg /etc/ansible/ansible.cfg
 
+COPY ~/.ssh/test1.pem /var/jenkins_home/.ssh/
 # Drop back to the regular Jenkins user - good practice
 USER jenkins
 
